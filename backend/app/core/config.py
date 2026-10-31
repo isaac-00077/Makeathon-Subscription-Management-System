@@ -20,6 +20,15 @@ class Settings(BaseSettings):
     DB_USER: str = os.getenv("DB_USER", "postgres")
     DB_PASSWORD: str = os.getenv("DB_PASSWORD", "postgres")
 
+    # Razorpay (Keep Secret strictly backend-only)
+    RAZORPAY_KEY_ID: str = os.getenv("RAZORPAY_KEY_ID", "rzp_test_1DP5mmOlF5G5ag")
+    RAZORPAY_KEY_SECRET: str = os.getenv("RAZORPAY_KEY_SECRET", "mock_razorpay_secret_key_12345")
+    RAZORPAY_WEBHOOK_SECRET: str = os.getenv("RAZORPAY_WEBHOOK_SECRET", "mock_webhook_secret_key_12345")
+
+    # Billing Scheduler
+    ENABLE_BILLING_SCHEDULER: bool = os.getenv("ENABLE_BILLING_SCHEDULER", "True").lower() in ("true", "1", "yes")
+    BILLING_CHECK_INTERVAL_MINUTES: int = int(os.getenv("BILLING_CHECK_INTERVAL_MINUTES", "60"))
+
     @property
     def DATABASE_URL(self) -> str:
         return f"postgresql+psycopg://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
