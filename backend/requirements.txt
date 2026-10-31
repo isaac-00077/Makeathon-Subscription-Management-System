@@ -75,3 +75,6 @@ qrcode[pil]
 # =====================================
 pytest
 pytest-asyncio
+
+razorpay
+apscheduler
