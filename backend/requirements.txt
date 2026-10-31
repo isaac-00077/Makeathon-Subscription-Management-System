@@ -1,0 +1,77 @@
+
+# =====================================
+# 1. FASTAPI BACKEND
+# =====================================
+fastapi
+uvicorn[standard]
+
+# =====================================
+# 2. DATABASE - POSTGRESQL
+# =====================================
+sqlalchemy
+psycopg[binary]
+alembic
+
+# =====================================
+# 3. CONFIGURATION & VALIDATION
+# =====================================
+pydantic
+pydantic-settings
+python-dotenv
+email-validator
+
+# =====================================
+# 4. AUTHENTICATION & SECURITY
+# =====================================
+PyJWT[crypto]
+pwdlib[argon2]
+python-multipart
+
+# =====================================
+# 5. HTTP REQUESTS & API INTEGRATION
+# =====================================
+requests
+httpx
+aiofiles
+
+# =====================================
+# 6. LOCAL AI - OLLAMA
+# =====================================
+ollama
+
+# =====================================
+# 7. LLM & RAG
+# =====================================
+langchain
+langchain-community
+langchain-text-splitters
+langchain-ollama
+chromadb
+sentence-transformers
+
+# =====================================
+# 8. DOCUMENT PROCESSING
+# =====================================
+pypdf
+pymupdf
+python-docx
+
+# =====================================
+# 9. DATA PROCESSING
+# =====================================
+pandas
+numpy
+openpyxl
+
+# =====================================
+# 10. PDF & IMAGE PROCESSING
+# =====================================
+reportlab
+pillow
+qrcode[pil]
+
+# =====================================
+# 11. TESTING
+# =====================================
+pytest
+pytest-asyncio
